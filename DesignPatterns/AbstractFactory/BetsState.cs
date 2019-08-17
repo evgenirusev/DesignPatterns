@@ -14,7 +14,6 @@
             IBetInfo betInfo = _betAbstractFactory.CreateBetInfo();
             IPlaceBetsButton placeBetsButton = _betAbstractFactory.CreatePlaceBetsButton();
 
-            // Use the products which are created from the abstract factory
             betInfo.DisplayBetInfo();
             placeBetsButton.DisplayPlaceBetsButton();
         }

@@ -1,0 +1,45 @@
+1. Write a short description (about half page) for each of them. Describe their motivation, 
+intent, applicability, known uses, implementation, consequences, structure, related patterns, etc.
+
+Abstract Factory Description
+-------------------------------------------------
+
+Intent - Provide an abstraction to a client for creating families of related or dependent objects, without specifying their concrete classes.
+
+Motivation - The Abstract Factory is useful when a client object needs to create instances of one out of multiple possible related, dependent classes without
+having to know which specific implementation it is using. The Abstract Factory provides the necessary interface for creating the objects which the client object requires.
+For each group or family related objects, a concrete abstract factory is implemented that manages the creation of the objects. 
+Client objects most often receive the concrete abstract factory through constructor dependency injection and then make use of it to create the necessary objects.
+
+Applicability - Abstract Factory should be used when:
+   - a client object should be configured to use one of multiple families of related objects.
+   - a client object should be independent of how it's product objects are created.
+   - a family of related objects must be used together.
+   - you want to provide an interface for creating family of related objects without revealing their implementations.
+   - you need a run-time value to construct a dependency for one of the products.
+
+Known uses - We can see Abstract Factory being used in the javax library to create objects:
+   - Class XPathFactory - An XPathFactory instance is used to create XPath objects. (https://docs.oracle.com/javase/8/docs/api/javax/xml/xpath/XPathFactory.html#newInstance--)
+   - Class TransformerFactory - A TransformerFactory instance is used to create Transformer and Templates objects. (https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/TransformerFactory.html#newInstance--)
+
+Implementation:
+   - Factories as singletons - since an application usually needs only one instance of a concrete factory, it is a common practice for the concrete factories to be singletons.
+   - Creating the products - AbstractFactory only declares an interface for the possible products which it can create. It is up to the concrete factories to determine how the products get created.
+     The most common way for the concrete factories to create the products, is through using a Factory Method for each product.
+
+Consequences:
+   - It isolates and decouples the concrete classes from the client - the client uses an abstraction to create the products and the concrete implementation is determined at runtime often
+     using constructor dependency injection.
+   - It allows us to enforce a constant for the family of related objects to always be used together.
+   - It makes exchanging product families easy
+
+Structure:
+   - AbstractFactory (IBetsAbstractFactory.cs)
+   - ConcreteFactory (MansionBetsAbstractFactory.cs, ToteBetsAbstractFactory.cs)
+   - AbstractProduct (IBetInfo.cs, IPlaceBetsButton.cs)
+   - ConcreteProduct (MansionBetInfo.cs, MansionPlaceBetsButton.cs, ToteBetInfo.cs, TotePlaceBetsButton.cs)
+   - Client (BetsState.cs)
+
+Related Patterns:
+   - Factory Method pattern is often used to implement the Abstract Factory.
+   - Singletons are often used for the concrete classes.
