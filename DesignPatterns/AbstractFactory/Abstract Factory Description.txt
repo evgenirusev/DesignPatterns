@@ -1,7 +1,7 @@
 Abstract Factory Description
 -------------------------------------------------
 
-Intent - Provide an abstraction to a client for creating families of related or dependent objects, without specifying their concrete classes.
+Intent - Provide an abstraction to a client object for creating families of related or dependent objects, without specifying their concrete classes.
 
 Motivation - The Abstract Factory is useful when a client object needs to create instances of one out of multiple possible related, dependent classes without
 having to know which specific implementation it is using. The Abstract Factory provides the necessary interface for creating the objects which the client object requires.
