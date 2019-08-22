@@ -9,3 +9,14 @@ C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactory\obj\Debug\netc
 C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactory\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.AssemblyInfo.cs
 C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactory\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.dll
 C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactory\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.pdb
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\bin\Debug\netcoreapp2.1\AbstractFactoryPattern.deps.json
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\bin\Debug\netcoreapp2.1\AbstractFactoryPattern.runtimeconfig.json
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\bin\Debug\netcoreapp2.1\AbstractFactoryPattern.runtimeconfig.dev.json
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\bin\Debug\netcoreapp2.1\AbstractFactoryPattern.dll
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\bin\Debug\netcoreapp2.1\AbstractFactoryPattern.pdb
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.csprojAssemblyReference.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.csproj.CoreCompileInputs.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.AssemblyInfoInputs.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.AssemblyInfo.cs
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.dll
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\AbstractFactoryPattern\obj\Debug\netcoreapp2.1\AbstractFactoryPattern.pdb

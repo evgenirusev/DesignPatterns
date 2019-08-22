@@ -1,10 +1,10 @@
-﻿using BridgePattern.Abstractions;
-using BridgePattern.ConcreteImplementors;
-using BridgePattern.RefinedAbstractions;
+﻿using Implementation.Abstractions;
+using Implementation.ConcreteImplementors;
+using Implementation.RefinedAbstractions;
 using ConcreteImplementors;
 using System;
 
-namespace BridgePattern
+namespace Implementation
 {
     class Client
     {

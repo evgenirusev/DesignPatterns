@@ -1,4 +1,4 @@
-﻿using BridgePattern.Implementors;
+﻿using Implementation.Implementors;
 
 namespace ConcreteImplementors
 {

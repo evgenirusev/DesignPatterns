@@ -1,6 +1,6 @@
-﻿using BridgePattern.Implementors;
+﻿using Implementation.Implementors;
 
-namespace BridgePattern.Abstractions
+namespace Implementation.Abstractions
 {
     public abstract class BetslipView
     {

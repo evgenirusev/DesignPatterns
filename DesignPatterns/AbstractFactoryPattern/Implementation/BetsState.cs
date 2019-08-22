@@ -1,7 +1,7 @@
-﻿using AbstractFactoryPattern.Implementation.AbstractFactories;
-using AbstractFactoryPattern.Implementation.Products;
+﻿using Implementation.AbstractFactories;
+using Implementation.Products;
 
-namespace AbstractFactoryPattern.Implementation
+namespace Implementation
 {
     public class BetsState
     {

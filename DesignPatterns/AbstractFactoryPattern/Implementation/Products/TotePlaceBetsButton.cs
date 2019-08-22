@@ -1,4 +1,4 @@
-﻿namespace AbstractFactoryPattern.Implementation.Products
+﻿namespace Implementation.Products
 {
     public class TotePlaceBetsButton : IPlaceBetsButton
     {

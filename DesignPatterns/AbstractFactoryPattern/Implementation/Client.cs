@@ -1,8 +1,7 @@
-﻿using AbstractFactoryPattern.Implementation;
-using AbstractFactoryPattern.Implementation.AbstractFactories;
+﻿using Implementation.AbstractFactories;
 using System;
 
-namespace AbstractFactoryPattern
+namespace Implementation
 {
     class Client
     {

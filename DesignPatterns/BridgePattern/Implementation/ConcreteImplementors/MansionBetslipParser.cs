@@ -1,6 +1,6 @@
-﻿using BridgePattern.Implementors;
+﻿using Implementation.Implementors;
 
-namespace BridgePattern.ConcreteImplementors
+namespace Implementation.ConcreteImplementors
 {
     public class MansionBetslipParser : IBetslipParser
     {

@@ -1,4 +1,4 @@
-﻿namespace BridgePattern.Implementors
+﻿namespace Implementation.Implementors
 {
     public interface IBetslipParser
     {

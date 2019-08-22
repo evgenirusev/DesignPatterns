@@ -1,6 +1,6 @@
-﻿using AbstractFactoryPattern.Implementation.Products;
+﻿using Implementation.Products;
 
-namespace AbstractFactoryPattern.Implementation.AbstractFactories
+namespace Implementation.AbstractFactories
 {
     public class ToteBetsAbstractFactory : IBetsAbstractFactory
     {

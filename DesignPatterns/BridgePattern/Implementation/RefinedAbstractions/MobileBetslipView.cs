@@ -1,8 +1,8 @@
-﻿using BridgePattern.Abstractions;
-using BridgePattern.Implementors;
+﻿using Implementation.Abstractions;
+using Implementation.Implementors;
 using System;
 
-namespace BridgePattern.RefinedAbstractions
+namespace Implementation.RefinedAbstractions
 {
     public class MobileBetslipView : BetslipView
     {
