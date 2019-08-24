@@ -44,3 +44,4 @@ Related Patterns:
    - Adapter - The differences between the two are that The Adapter makes things work after they're designed
      while Bridge makes them work before they are. 
    - Abstract Factory
+   - Strategy
