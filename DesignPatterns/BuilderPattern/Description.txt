@@ -1,0 +1,58 @@
+Builder Description
+-------------------------------------------------
+
+Intent - separate the construction of a complex object from it's representation so that the same
+construction process can create different representations.
+
+Motivation - the Builder pattern is useful when we need to create multiple representations of
+a complex object, while being able to reuse the same construction process/algorithm. The pattern
+allows us to have a clear sepparation between the classes which contain the data (representation)
+and the classes which are responsible for the construction process.
+
+Applicability - Builder should be used when:
+   - the algorithm for creating a complex object should be independent of the parts that
+     make up the object.
+   - we need to have a way to change the construction process.
+   - the construction process must allow different representations for the object that's constructed.
+
+Implementation:
+   - usually there is an abstract Builder class, which is implemented by Concrete Builder classes that
+     have methods which modify the representation of the object. The Builder abstract class defines 
+     operations for the creation of the representation of the object and the Director class is 
+     using these operations to build the final object. Each Concrete Builder contains all the code
+     responsible for creating the representation of a specific kind of product, then different 
+     Director classes can reuse it to build different product variants from the same set of operations.
+
+Consequences:
+   - The Builder Pattern encapsulates the internal data for creating a product by providing 
+     an abstraction to the Director class - the Builder abstract class is the interface that
+     the Director class will use to create the products, without knowing the concrete representation 
+     of any of the Concrete Builders. The interface lets the Builder hide the representation 
+     and internal structure of the product.
+   - The Builder Pattern let's you vary a product's internal representations easily - all you have to do to change
+     a product's internal representation and have a new product type, is define new kind of 
+     Concrete Builder. This is possible, because the Director class uses the same Builder abstraction
+     for all products. This means that if we have a new business requirement, we can extend the
+     application without modifying the existing classes (Open/Closed principle).
+   - The Builder Pattern isolates the logic for construction and representation. This supports
+     sepparation of concerns and the DRY principle. The Builder classes should only be responsible
+     for the representation data, they should not know about the algorithm for the construction process.
+     The Director's only responsibility should be to define the algorithm for construction. This
+     structure supports reusability and allows for the Director and Builder classes to vary at runtime.
+   - The Builder Pattern allows us to have more control over the construction process. It assures us that
+     we will not have a product object in an invalid state, because the construction process is under the
+     Director's control. The product may be retrieved only when the entire construction process is complete.
+
+Structure:
+   - Builder (RetrieverBuilder.cs)
+   - ConcreteBuilder (ToteRetrieverBuilder.cs, BetSafeRetrieverBuilder.cs)
+   - Director (RetrieverMaker.cs)
+   - Product (Retriever.cs)
+
+Related Patterns:
+   - Simple Factory
+   - Factory Method
+   - Abstract Factory
+
+Known Uses:
+   - I have seen the Builder being used in ASP.NET MVC (ControllerBuilder class) - https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.controllerbuilder?view=aspnet-mvc-5.2

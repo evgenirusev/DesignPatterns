@@ -1,0 +1,9 @@
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\bin\Debug\netstandard2.0\BuilderPattern.deps.json
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\bin\Debug\netstandard2.0\BuilderPattern.dll
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\bin\Debug\netstandard2.0\BuilderPattern.pdb
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\obj\Debug\netstandard2.0\BuilderPattern.csprojAssemblyReference.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\obj\Debug\netstandard2.0\BuilderPattern.csproj.CoreCompileInputs.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\obj\Debug\netstandard2.0\BuilderPattern.AssemblyInfoInputs.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\obj\Debug\netstandard2.0\BuilderPattern.AssemblyInfo.cs
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\obj\Debug\netstandard2.0\BuilderPattern.dll
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\BuilderPattern\obj\Debug\netstandard2.0\BuilderPattern.pdb
