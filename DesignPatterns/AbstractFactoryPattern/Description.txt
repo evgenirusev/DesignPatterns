@@ -41,7 +41,7 @@ Structure:
    - ConcreteFactory (MansionBetsAbstractFactory.cs, ToteBetsAbstractFactory.cs)
    - AbstractProduct (IBetInfo.cs, IPlaceBetsButton.cs)
    - ConcreteProduct (MansionBetInfo.cs, MansionPlaceBetsButton.cs, ToteBetInfo.cs, TotePlaceBetsButton.cs)
-   - Client (BetsState.cs)
+   - Client Object (BetsState.cs)
 
 Related Patterns:
    - Factory Method pattern is often used to implement the Abstract Factory.

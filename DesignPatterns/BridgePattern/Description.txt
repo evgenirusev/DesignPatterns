@@ -23,6 +23,7 @@ Implementation:
    - Bridge should be implemented in a way that supports swapping implementations easily.
      This is helpful because if there is a new business requirement, all we have to do
      is create a new Concrete Implementor for the new requirement implementation.
+     (which means that extending is very easy. Fully supports the Open/Closed principle)
    - Bridge pattern should be implemented in a way which supports independently
      extending the refined abstractions and concrete implementations.
 
@@ -34,11 +35,10 @@ Consequences:
      
 
 Structure:
-   - AbstractFactory (IBetsAbstractFactory.cs)
-   - ConcreteFactory (MansionBetsAbstractFactory.cs, ToteBetsAbstractFactory.cs)
-   - AbstractProduct (IBetInfo.cs, IPlaceBetsButton.cs)
-   - ConcreteProduct (MansionBetInfo.cs, MansionPlaceBetsButton.cs, ToteBetInfo.cs, TotePlaceBetsButton.cs)
-   - Client (BetsState.cs)
+   - Abstraction (BetslipView.cs)
+   - Refined Abstractions (DesktopBetslipView.cs, MobileBetslipView.cs)
+   - Implementor (IBetslipParser.cs)
+   - Concrete Implementors (MansionBetslipParser.cs, ToteBetslipParser.cs)
 
 Related Patterns:
    - Adapter - The differences between the two are that The Adapter makes things work after they're designed
