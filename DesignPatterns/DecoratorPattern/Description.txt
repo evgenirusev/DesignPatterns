@@ -1,0 +1,66 @@
+Decorator Description
+-------------------------------------------------
+
+Intent - add additional responsibilities to an object at run time. Decorators provide
+a flexible alternative to inheritance for extending functionality.
+
+Motivation - often we have a requirement to extend an object with additional responsibilities, 
+not an entire class. The most common to do this is through using inheritance. This is
+not flexible, because the functionality we're chosing to add is made statically. This way the
+new functionality we're adding is directly coupled with the parent class, therefore it cannot be reused.
+This often results in breaking the DRY principle and sometimes having unmaintainable inheritance 
+hierarchies which scale exponentially with new functionality being added (also called Class Explosion). 
+The more flexible approach is to enclose the component into another object that adds the new 
+functionality dynamically at run time.
+
+Applicability:
+   - Use Decorator to add behavior to objects at run time, instead of using inheritance, 
+     because inheritance is static and applies to an entire class.
+   - Decorator is particularly useful for extending legacy applications.
+   - Use Decorator when you need to recursively decorate a core object by wrapping it with new
+     decorator objects.
+   - Use Decorator when extending functionality by using inheritance is impractical. When 
+     extending by subclassing is overused, it can result in an unmaintainable explosion of
+     classes to support every single possible combination.
+   - Decorator pattern should be chosen over inheritance whenever possible, but there are some
+     particular situations where Decorator would be difficult to implement. For example when 
+     derived classes need to access non-public fields or methods in the decorated class. 
+     Decorators are only aware of the public interface, therefore they do not have access to 
+     fields or methods that are specific to one implementation or another.
+
+Implementation:
+   - The Decorator object must implement the same interface as the object being decorated.
+   - Since the Decorator pattern only changes an object from the outside, the decorated
+     object doesn't have to know anything about it's decorators.
+   - The implementation usually consists of a component that we want to extend, a Decorator
+     abstract class which extends the same interface and any number of concrete Decorator
+     classes, appending new functionality.
+
+Consequences:
+   - More flexibility and efficiency than inheritance.
+   - Decorators objects are interchangeable - if you have multiple Decorators wrapping an object,
+     the Decorator design allows you to easily change the order of the Decorators, allowing you to
+     chose every single possible functionality permutation. To achieve this with inheritance, you
+     have to make a subclass for each possible permutations, which means with each new requirement
+     the inheritance hierarchy will grow exponentially.
+   - Avoids complex and unmaintainable inheritance hierarchies.
+   - Much greater reusability - using the Decorator design will result in lost of small objects
+     having a single, well defined responsibility. This will increase reusability.
+
+Structure:
+   - Component (IPropsBuilder.cs)
+   - ConcreteComponent (State.cs)
+   - Decorator (IPropsBuilderDecorator.cs)
+   - ConcreteDecorator (BlockModifierDecorator.cs, DictionaryDecorator.cs, IsSelectedDecorator.cs)
+
+Related Patterns:
+   - Adapter
+   - Composite
+   - Strategy (another alternative pattern to change an object)
+
+Known Uses:
+   - I have seen the Decorator pattern being used in Java EE - Class HttpServletRequestWrapper &
+     Class HttpServletResponseWrapper. 
+     (https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServletRequestWrapper.html)
+     (https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServletResponseWrapper.html)
+   - Decorator design pattern is commonly used in many Legacy applications.
