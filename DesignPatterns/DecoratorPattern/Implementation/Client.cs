@@ -6,7 +6,7 @@ namespace Implementation
     {
         static void Main(string[] args)
         {
-            // Create any possible permutation at runtime
+            // Create any possible permutation that you need at runtime
             IPropsBuilder state = new State();
             state = new BlockModifierDecorator(state);
             state = new IsSelectedDecorator(state);

@@ -37,7 +37,8 @@ Implementation:
      classes, appending new functionality.
 
 Consequences:
-   - More flexibility and efficiency than inheritance.
+   - Leaves the original object unaware of subclasses. The added functionality is completely
+     decoupled from the original object.
    - Decorators objects are interchangeable - if you have multiple Decorators wrapping an object,
      the Decorator design allows you to easily change the order of the Decorators, allowing you to
      chose every single possible functionality permutation. To achieve this with inheritance, you
@@ -59,8 +60,9 @@ Related Patterns:
    - Strategy (another alternative pattern to change an object)
 
 Known Uses:
+   - .NET Framework IExtenderProvider Interface - allows developers to assign new elements
+     to existing components without inheritance.
    - I have seen the Decorator pattern being used in Java EE - Class HttpServletRequestWrapper &
      Class HttpServletResponseWrapper. 
      (https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServletRequestWrapper.html)
      (https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServletResponseWrapper.html)
-   - Decorator design pattern is commonly used in many Legacy applications.
