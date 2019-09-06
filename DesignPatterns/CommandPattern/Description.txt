@@ -1,0 +1,46 @@
+Command Pattern Description
+-------------------------------------------------
+
+Intent - encapsulate a request as an object and use that object to represent an action/command.
+
+Motivation - The Command Pattern is useful when need to execute an action, without knowing anything about the action itself.
+The Command Pattern allows you to hide the complex logic and dependencies for the execution of that request from the client that will be executing it.
+This allows for decoupling between the client and the request. For example user interfaces that include buttons that issue HTTP requests shouldn't
+know anything about how the request is being executed, they just execute the action and delegate the operation towards the object responsible to carry
+out the request.
+
+Applicability:
+   - parameterize objects with actions to perform
+   - logging - since Command objects encapsulate the details of executing an action and then logging the fact that it was executed,
+     then you know that you will have consistent logging for the particular action.
+   - support undo operations - the Command objects can store state, therefore can support state management operations such as Do/Undo
+   - use Command Pattern if you want your Executor object to depend on an abstraction for executing commands. This allows you to
+     change Command objects dynamically at run time.
+
+Implementation:
+   - The pattern should be implemented in such a way that the Command Invoker object should treat each Command object as a 
+     "black box" by simply invoking the abstraction methods. The client should't know anything about the actual execution of
+     the command.
+   - You can implement the Command objects to support undo functionalities by implementing an un-execute operation which should 
+     reverse the last execute operation. To achieve this, the ConcreteCommand might need to store additional state to do so.
+   - Sequences of Command objects can be assembled into composite objects.
+
+Consequences:
+   - Commands are completely self contained within the context of the Invoker. The Invoker will not know anything about the 
+     ConcreteCommands nor their dependencies. 
+   - Easy to add new commands. (supports open/closed principle)
+   - Decouples the object that invokes the operation from the one that knows how to perform it.
+
+Structure:
+   - ICommand (ICommand.cs)
+   - ConcreteCommand (PlaceBetsCommand.cs, DisplayTooltipCommand.cs)
+   - Receiver (IBetPlacer.cs, ITooltipRenderer.cs)
+   - ConcreteReceiver (BetPlacementUtil.cs, TooltipRenderer.cs)
+   - Invoker (BetslipUI.cs)
+
+Related Patterns:
+   - Memento - also supports undo operations by keeping a state
+   - Composite - composite pattern can be used to implement Macro Commands. Macro Commands are a composite of micro commands.
+
+Known Uses:
+   - (Java) All implementations of javax.swing.Action - https://docs.oracle.com/javase/8/docs/api/javax/swing/Action.html
