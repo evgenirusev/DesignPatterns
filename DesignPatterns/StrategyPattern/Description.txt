@@ -1,0 +1,46 @@
+Strategy Description
+-------------------------------------------------
+
+Intent: - define a family of algorithms, encapsulate each one and make them interchangeable. Capture the 
+abstraction in an interface, bury implementation details in derived classes.
+
+Motivation - when we're designing OOP systems, we don't want to be in a situation where our classes are 
+coupled with only one specific algorithm, because when the requirements change we won't be able to
+change that algorithm without violating the Open/Closed principle - we would have to modify the existing
+algorithm any time a requirement changes. The Strategy solves this problem by enabling us to chose the algorithm
+we want dynamically at run time.
+
+Applicability:
+   - Whenever we want to close the class for modification (Open/Closed), and determine an algorithm dynamically
+     at run time, Strategy should be considered.
+   - Whenever we have switch-case statements, Strategy should be considered as a better alternative.
+   - Provides a way to configure a class with one out of many behaviors.
+   - Use Strategy whenever you want to hide the algorithm-specific information from the client using it.
+
+Implementation:
+   - Strategy Pattern should be implemented in a way that the Context object is using an abstraction for
+     the Strategy, not a concrete implementation. The context must know only about the Strategy interface.
+   - The Strategy object is most commonly passed through DI to the Context object.
+   - If the Strategy object needs some dependencies in order to do it's operations, we have two choices:
+       -> Have the Context pass the necessary dependencies to the Strategy object.
+       -> Have the Context pass itself as an argument to the Strategy object and the Strategy would get
+          the dependencies explicitly by asking the passed Context object.
+
+Consequences:
+   - Makes the system easier to extend - Adding a new Strategy does not modify the existing class (Open/Closed).
+   - Allows unit tests to be written for each individual concrete Strategy.
+   - Higher lever of abstraction for the Context/Client object
+   - Defines a family of algorithms
+
+Structure:
+   - Strategy (IPropsBuilder.cs)
+   - ConcreteStrategy (CenterPropsBuilder.cs, SidePropsBuilder.cs)
+   - Context (State.cs)
+
+Related Patterns:
+   - Bridge
+
+Knows Uses:
+   - Service classes passed to constructors for ASP.NET MVC Controllers
+   - Javascript Array.prototype.sort() function accepts a Strategy.
+   - I've seen it being used many times in our Legacy application at our Company.
