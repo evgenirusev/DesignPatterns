@@ -1,0 +1,41 @@
+Adapter Description
+-------------------------------------------------
+
+Intent - convert the interface of a class into another interface that clients expect. Adapter lets classes work 
+together that couldn't otherwise because of incompatible interfaces.
+
+Motivation - if a class offers functionality that you would like to reuse, but it's interface is not compatible
+with what your classes, the solution is the Adapter Pattern. The Adapter converts the interface of a class into 
+another interface that suits your needs. 
+
+Applicability:
+   - Use Adapter pattern when you want to reuse an existing functionality and its interface does not match the 
+     one you need.
+   - Allow classes to work together that couldn't otherwise because of the incompatible interfaces.
+   - Use it to Future-proof client implementations by having them depdend of Adapter interfaces, rather than 
+     concrete classes directly.
+
+Implementation: 
+   - It is implemented by creating a new class with the desired interface and then wrapping the original class 
+     methods to effectively contain the adapted object. 
+   - There are two types of Adapter implementations:
+       -> Object Adapter - The relationship between the Adapter object and the Adaptee is done through object composition -
+          the adapter receives the adaptee through DI and uses it to perform the target interface actions.
+       -> Class Adapter - The relationship between them can also be implemented using inheritance.
+
+Consequences:
+   - Adapts the adaptee functionality to the required Target interface.
+   - Object Adapter - lets a single Adapter work with many Concrete Adaptees.
+   - Class Adapter - lets the Adapter class override some of Adaptee's behavior, since Adapter is a subclass of the Adaptee.
+
+Structure:
+   - Target (INotificationSender.cs)
+   - Adaptee (LegacyNotifier.cs)
+   - Adapter (LegacyNotifierAdapter.cs)
+
+Related Patterns:
+   - Bridge - has a structure similar to the Bridge pattern, but it's intent is different.
+   - Decorator
+   - Proxy
+
+Known Uses - ADO.NET IDataAdapter interface - https://docs.microsoft.com/en-us/dotnet/api/system.data.idataadapter?view=netframework-4.8
