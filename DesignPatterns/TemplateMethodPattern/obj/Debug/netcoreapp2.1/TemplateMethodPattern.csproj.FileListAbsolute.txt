@@ -1,0 +1,11 @@
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\bin\Debug\netcoreapp2.1\TemplateMethodPattern.deps.json
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\bin\Debug\netcoreapp2.1\TemplateMethodPattern.runtimeconfig.json
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\bin\Debug\netcoreapp2.1\TemplateMethodPattern.runtimeconfig.dev.json
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\bin\Debug\netcoreapp2.1\TemplateMethodPattern.dll
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\bin\Debug\netcoreapp2.1\TemplateMethodPattern.pdb
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\obj\Debug\netcoreapp2.1\TemplateMethodPattern.csprojAssemblyReference.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\obj\Debug\netcoreapp2.1\TemplateMethodPattern.csproj.CoreCompileInputs.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\obj\Debug\netcoreapp2.1\TemplateMethodPattern.AssemblyInfoInputs.cache
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\obj\Debug\netcoreapp2.1\TemplateMethodPattern.AssemblyInfo.cs
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\obj\Debug\netcoreapp2.1\TemplateMethodPattern.dll
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\TemplateMethodPattern\obj\Debug\netcoreapp2.1\TemplateMethodPattern.pdb

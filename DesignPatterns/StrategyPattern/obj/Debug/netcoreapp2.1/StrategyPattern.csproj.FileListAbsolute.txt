@@ -8,3 +8,4 @@ C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\StrategyPattern\obj\Debug\netc
 C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.AssemblyInfo.cs
 C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.dll
 C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.pdb
+C:\Users\Evgeni\dev\DesignPatterns\DesignPatterns\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.csprojAssemblyReference.cache

@@ -1,0 +1,40 @@
+Template Method Description
+-------------------------------------------------
+
+Intent - define the steps of an algorithm in a method and let the subclass implement the specific steps of that algorithm.
+
+Motivation - Template Method pattern is useful in the following situation - two different classes have similar steps for an algorithm,
+but have no reusability and there is no common abstraction. If a change, which is common to both components becomes necessary,
+we must change the logic both the components, which violates the DRY principle.
+
+Applicability
+   - Multiple classes should follow the same common algorithm or steps for a certain operation.
+   - The concrete steps of that algorithm are defined in the subclasses of each component.
+   - Use the Template Pattern when you want to make sure that if you make a change in the steps
+     of the algorithm, all of the classes using the algorithm will share the change.
+   - Some of the steps of the algorithm can be encapsulated in the base class with a default
+     implementation and overriden in the subclasses if necessary.
+
+Implementation:
+   - When implementing the Template Method pattern, it is a good practice to try to reuse as much of the common logic in 
+     the base class as possible. This will make the implementation of the subclasses easier, because there will be less
+     code to override.
+
+Consequences:
+   - Code reusability.
+   - The Template Method pattern relies on inheritance, rather than composition, which might be considered as a limitation.
+   - The subclasses will consist only of the implementation details for the Template Method steps.
+   - Hook operations - provide default behavior that subclasses can override if necessary.
+
+Structure:
+   - AbstractClass (BaseEventListUI.cs)
+   - ConcreteClass (DarkEventListUI.cs, LightEventListUI.cs)
+
+Related Patterns:
+   - Factory Method
+   - Strategy
+
+Known Uses:
+   - (Java EE) javax.servlet.http.HttpServlet - methods such as (doPost, doGet, doPut etc.) all send a HTTP 405
+     "Method Not Allowed" response as default behavior. You're free to implement none or any of them. 
+     (https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html)
