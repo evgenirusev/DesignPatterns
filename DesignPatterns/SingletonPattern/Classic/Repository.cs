@@ -9,7 +9,7 @@
         public static Repository Instance()
         {
             if (_instance == null) {
-                // Creating DB Connection...
+                // Create DB Connection...
                 _instance = new Repository();
                 
             }

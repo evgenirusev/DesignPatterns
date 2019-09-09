@@ -18,7 +18,7 @@
                     {
                         if (_instance == null)
                         {
-                            // Creating DB Connection...
+                            // Create DB Connection...
                             _instance = new ThreadSafeRepository();
                         }
                     }

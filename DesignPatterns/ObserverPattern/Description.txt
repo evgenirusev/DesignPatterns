@@ -1,0 +1,48 @@
+Observer Description
+-------------------------------------------------
+
+Intent - implement an event handling system between objects so that when one object changes
+state, all its observers are notified and updated automatically. 
+
+Motivation - we need an effective way to maintain consistency between related objects.
+
+Applicability - consider using the Observer pattern when:
+   - you need a notification system which notifies dependent objects.
+   - changing one object requires a change to many objects.
+   - one object is dependent on another object.
+
+Implementation:
+   - There are many ways to implement the Observer pattern, some of which are:
+       -> The classical GOF method - the Subject keeps track of the observers it needs to notify
+          and after a change in state it updates them.
+       -> (.NET) C# - using Events and Delegates
+       -> Using a message buss system
+       -> (Kafka/Java Messaging Service) Publish/Subscribe frameworks
+   - Observing more than one subject - in certain systens it might be required for one observer
+     to keep track of multiple subjects. It's necessary to extend the Update method of the observer in such 
+     cases to let the observer know which subject is sending the notification. 
+   - Disposing/Managing observers - when implementing the Observer patter it is important to dispose the observer
+     objects which are no longer requred. The garbage collector will not clear them because of the existing 
+     refferences, therefore explicitly disposing the observer objects might be required.
+
+Consequences:
+   - Support for broadcast communication between objects - The Subject broadcasts events to all 
+     registered Observers. 
+   - The Subject is coupled only to the Observer abstraction.
+   - Observers register themselves with the Subject.
+   - The Subject may "push" information at the Observers, or, the Observers may "pull" the 
+     information they need from the Subject. 
+
+Structure:
+   - AbstractObserver (IObserver.cs)
+   - ConcreteObserver (BetslipUI.cs, EventListUI.cs)
+   - AbstractSubject (AbstractSubject.cs)
+   - ConcreteSubject (SportsDataSubject.cs)
+
+Related Patterns:
+   - Mediator
+
+Known uses:
+   - (Javascript Library) MobX
+   - MVC Frameworks (ASP.NET Core MVC, Laravel, Spring Framework, etc..)
+   - (Javascript) addEventListener()
