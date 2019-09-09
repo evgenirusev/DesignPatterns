@@ -1,0 +1,35 @@
+Singleton Description
+-------------------------------------------------
+
+Intent - ensure a class only has one instance, and provide a global point of access to it. 
+
+Motivation - application needs one, and only one, instance of an object. There must a be a constraint which restricts 
+creating more than one instance. Additionally, lazy initialization and global access are necessary. 
+
+Applicability:
+   - There must be only one instance of an object.
+   - When creating an instance is expensive, a Singleton object can improve performance (because of lazy initialization).
+   - An object must be globally accessible.
+
+Implementation:
+   - The default Singleton implementation is not thread safe and should not be used in multi-threaded environments, including
+     ASP.NET with IIS web server.
+   - The Singleton class must be written so that only one instance can be created. The most common way to do this is to hide
+     the operation that creates the instance behind a class operation that guarantees that only one instance is created
+     (For example a static member function or a static method).
+
+Consequences:
+   - Controlled/encapsulated access to the Singleton instance -  the Singleton object can have strict control over how and
+     when clients access it
+   - Singletons may be very difficult to test - this is why it is commonly regarded as an anti-pattern.
+   - If implemented incorrectly, Singleton objects may not be thread-safe.
+
+Structure:
+   - Singleton (Repository.cs, ThreadSafeRepository.cs)
+   - Client (Client.cs)
+
+Related Patterns:
+   - Static classes - it is not a Design Pattern but it is commontly used as an alternative to using a Singleton.
+
+Known uses:
+   - Services in ASP.NET Core MVC can be registered as a Singleton in the IOC pool. Example - services.AddSingleton<IOperationSingleton, Operation>();
