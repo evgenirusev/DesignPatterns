@@ -1,5 +1,5 @@
 ﻿using Implementation.AbstractFactories;
-using Implementation.Products;
+using Implementation.AbstractProducts;
 
 namespace Implementation
 {
@@ -14,11 +14,11 @@ namespace Implementation
 
         public void BetPropsBuilder()
         {
-            IBetInfo betInfo = _betAbstractFactory.CreateBetInfo();
-            IPlaceBetsButton placeBetsButton = _betAbstractFactory.CreatePlaceBetsButton();
+            IFootballBet footballBet = _betAbstractFactory.CreateFootballBet();
+            IBasketballBet basketballBet = _betAbstractFactory.CreateBasketballBet();
 
-            betInfo.DisplayBetInfo();
-            placeBetsButton.DisplayPlaceBetsButton();
+            footballBet.DisplayFootballBet();
+            basketballBet.DisplayBasketballBet();
         }
     }
 }

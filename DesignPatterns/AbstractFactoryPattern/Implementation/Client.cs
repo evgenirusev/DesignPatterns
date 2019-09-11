@@ -8,14 +8,14 @@ namespace Implementation
         static void Main(string[] args)
         {
             IBetsAbstractFactory toteBetsAbstractFactory = new ToteBetsAbstractFactory();
-            IBetsAbstractFactory mansionBetsAbstractFactory = new MansionBetsAbstractFactory();
+            IBetsAbstractFactory sazkaBetsAbstractFactory = new SazkaBetsAbstractFactory();
 
             BetsState toteBetsState = new BetsState(toteBetsAbstractFactory);
             toteBetsState.BetPropsBuilder();
 
             Console.WriteLine();
 
-            BetsState mansionBetsState = new BetsState(mansionBetsAbstractFactory);
+            BetsState mansionBetsState = new BetsState(sazkaBetsAbstractFactory);
             mansionBetsState.BetPropsBuilder();
 
             Console.ReadLine();

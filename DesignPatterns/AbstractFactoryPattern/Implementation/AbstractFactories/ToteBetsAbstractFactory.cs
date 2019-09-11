@@ -1,17 +1,18 @@
-﻿using Implementation.Products;
+﻿using Implementation.AbstractProducts;
+using Implementation.ConcreteProducts;
 
 namespace Implementation.AbstractFactories
 {
     public class ToteBetsAbstractFactory : IBetsAbstractFactory
     {
-        public IBetInfo CreateBetInfo()
+        public IFootballBet CreateFootballBet()
         {
-            return new ToteBetInfo();
+            return new ToteFootballBet();
         }
 
-        public IPlaceBetsButton CreatePlaceBetsButton()
+        public IBasketballBet CreateBasketballBet()
         {
-            return new TotePlaceBetsButton();
+            return new ToteBasketballBet();
         }
     }
 }

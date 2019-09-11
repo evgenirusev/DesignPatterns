@@ -1,10 +1,10 @@
-﻿using Implementation.Products;
+﻿using Implementation.AbstractProducts;
 
 namespace Implementation.AbstractFactories
 {
     public interface IBetsAbstractFactory
     {
-        IBetInfo CreateBetInfo();
-        IPlaceBetsButton CreatePlaceBetsButton();
+        IFootballBet CreateFootballBet();
+        IBasketballBet CreateBasketballBet();
     }
 }
